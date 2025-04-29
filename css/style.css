@@ -154,7 +154,7 @@ a:visited {
 /*------------------------------------------------------------------*/
 /* title */
 .n-title h1 {
-    font-family: "Google Sans", system-ui, Arial, sans-serif;
+    font-family: "Georgia", system-ui, Arial, sans-serif;
     color: #082333;
     grid-column: text;
     font-size: 40px;
