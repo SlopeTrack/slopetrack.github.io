@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Slope-Track: A Multiple Object Tracking Dataset on Different Ski Slopes under Diverse Conditions
+    </title>
+    <meta content="GLAMR" property="og:title" />
+    <meta content="A typical pipeline for multi-object tracking (MOT) is to use a detector for object localization, and following re-identification (re-ID) for object association. This pipeline is partially motivated by recent progress in both object detec- tion and re-ID, and partially motivated by biases in existing tracking datasets, where most objects tend to have distin- guishing appearance and re-ID models are sufficient for es- tablishing associations. In response to such bias, we would like to re-emphasize that methods for multi-object tracking should also work when object appearance is not sufficiently discriminative. To this end, we propose a large-scale dataset for multi-human tracking, where humans have similar appearance, diverse motion and extreme articulation. As the dataset contains mostly group dancing videos, we name it “DanceTrack”. We expect DanceTrack to provide a better platform to develop more MOT algorithms that rely less on visual discrimination and depend more on motion analysis. We benchmark several state-of-the-art trackers on our dataset and observe a significant performance drop on DanceTrack when compared against existing benchmarks." name="description" property="og:description" />
+    <meta content="https://github.com/DanceTrack" property="og:url" />
+    <meta name="keywords" content="A Multiple Object Tracking Dataset on Different Ski Slopes under Diverse Conditions">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <script defer src="js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1>
+            Slope-Track: A Multiple Object Tracking Dataset on Different Ski Slopes under Diverse Conditions
+        </h1>
+    </div>
+    <div class="n-byline">
+        <div class="byline">
+            <ul class="authors">
+                <li>
+                    <a href="https://msaydez.github.io/" target="_blank">M'Saydez Campbell*</a><sup>1</sup>
+                </li>
+                <li>
+                    <a href="" target="_blank">Christophe Ducottet, </a><sup>1</sup>
+                </li>
+                <li>
+                    <a href="" target="_blank">Damien Muselet</a><sup>1</sup>
+                </li>
+                <li>
+                    <a href="" target="_blank">R´emi Emonet</a><sup>2</sup>
+                </li>
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                    <sup>
+                        1
+                    </sup>
+                    Universite Jean Monnet Saint-Etienne CNRS Institut d'Optique Graduate School Laboratoire Hubert Curien
+                </li>
+                <li>
+                    <sup>
+                        2
+                    </sup>
+                    Inria ; Institut Universitaire de France
+                </li>
+
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                    <sup>
+                        *
+                    </sup>
+                    equal contribution
+                </li> 
+            </ul>
+<!--             <ul class="authors venue">
+                <li>
+                    : 
+                </li>
+            </ul> -->
+            <ul class="authors links">
+                Coming soon
+            </ul>
+        </div>
+    </div>
+
+<!-- <iframe width="760" height="381" src="https://www.youtube.com/embed/IvxeJRg4rYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    
+    <div class="n-article">
+
+
+        <h2 id="abstract">
+            Abstract
+        </h2>
+        <p>
+            We introduce Slope-Track, a novel multiple object tracking (MOT) dataset. The dataset has over 96,000 frames collected from 10 diverse ski resorts under various weather and visibility conditions. Slope-Track addresses significant challenges in slope monitoring, including small object sizes, occlusions, fast and irregular motion, and low appearance consistency. It is densely annotated with bounding boxes and object identities, facilitating robust evaluation of detection and tracking algorithms. We evaluate the properties of the dataset and compare with the existing MOT datasets. Our results show that Slope-Track has a combination of challenges presented by other MOT datasets. Additionally, we benchmark a range of modern tracking-by-detection algorithms and analyze their association strategies through empirical evaluations. Our results demonstrate that relying on appearance features can decrease performance in this domain due to inconsistent visual features, while motion-based methods and spatial association strategies show stronger performance. Slope-Track thus provides a challenging benchmark for evaluating and improving multi-object tracking systems in real-world outdoor environments.
+        </p>
+        
+        <h2>
+            Dataset
+        </h2>
+        <div>
+            <img class="figure" src="media/slopetrack.png" width="100%" alt="Dataset Overview">
+        </div>
+        <p> Examples from Slope-Track dataset showing 9 of the 10 ski slopes included in the dataset. SlopeTrack includes diverse weather conditions, visibility levels and viewpoints (unique camera position and camera quality)
+        </p>
+        <p>
+        Slope-Track consists of:
+            <ul>
+              <li> 32 videos of varying lengths, 11 videos for the training set, 4 videos for the validation set, 5 videos for the test set and an additional 12 videos that can be used as an unlabeled test set. </li>
+              <li> The dataset is 3318 seconds in length with 96,498 frames (including the unannotated videos) and 555,528 bounding boxes and 889 unique ids (annotated videos).</li>
+            </ul>
+        </p>
+    
+         <h2 id="results">
+            Results
+        </h2>
+        
+        <h3 class="results" id="appearance">
+            Appearance Features
+        </h3>
+        <div>
+            <img class="figure" src="media/interframe.png" width="100%" alt="Mean inter-frame cosine distance of re-ID features">
+        </div>
+        <div>
+            <img class="figure" src="media/example_bbox.jpg" width="100%" alt="Example showing the change in features for the same object in the Slope-Track dataset including bounding box size in pixels.">
+        </div>
+        <p>
+        Appearance analysis on MOT17, DanceTrack, SportsMOT and Slope-Track reporting on the validation set. The result shows that SlopeTrack inconsistent appearance features across frames leading to the highest inter frame object dissimilarity.
+        </p>
+
+
+        <h3 class="results" id="motion">
+            Motion Analysis
+        </h3>
+        <div>
+            <figure>
+                <img src="media/adjacent_IoU.png" title="IoU on adjacent frames"
+                  alt="adjacentIoU">
+                <img src="media/kalmanIoU.png" title="Kalman Filter-based IoU on different prediction intervals"
+                  alt="kalmanIoU">
+            </figure>
+        </div>
+
+        <p>
+        Motion analysis of MOT17, DanceTrack, SportsMOT and Slope-Track reporting on the validation set, where the detection boxes are ground-truth boxes. The result shows that SlopeTrack has fast motion, variable-speed and non-linear motion comparable to SportsMOT.
+        </p>
+
+        
+
+
+
+        <h2 id="citation">
+            Citation
+        </h2>
+        <pre class="bibtex">
+            <code>
+                coming soon
+}
+            </code>
+        </pre>
+
+        <h2>
+            License
+        </h2>
+        <p>
+            The dataset of Slope-Track is available for <span class="emph">non-commercial</span> research purposes only. All videos and images of Slope-Track are obtained from the Internet which are not the property of the Universite Jean Monnet Saint-Etienne, CNRS Institut d'Optique Graduate School, Laboratoire Hubert Curien and INRIA.
+        </p>
+
+    
+        <br>
+        <h3>
+        Acknowledgement
+        </h3>    
+        <p>
+            This research is part of the collaborative i-D´emo R´egionalis´e SOFTEN project (Solution pour l’Optimisation des Flux de skieurs pour la Transition ENerg´etique des domaines skiables) of the French government’s regionalized France 2030 program. It was funded by BPI France, Direction G´en´erale de la Comp´etitivit´e de l’Industrie et des Services (DGCIS), Grenoble AlpesM´etropole and the Auvergne-Rhˆone-Alpes Region.
+        </p>
+        
+    </div>
+</body>
+
+</html>
+    
+                   
