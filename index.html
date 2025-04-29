@@ -124,14 +124,16 @@
         <h3 class="results" id="motion">
             Motion Analysis
         </h3>
-        <div>
-            <figure>
-                <img src="media/adjacent_IoU.png" title="IoU on adjacent frames" width="50%"
-                  alt="adjacentIoU">
-                <img src="media/kalmanIoU.png" title="Kalman Filter-based IoU on different prediction intervals" width="50%"
-                  alt="kalmanIoU">
-            </figure>
-        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="media/adjacent_IoU.png" alt="IoU on adjacent frames"  style="width:100%">
+            </div>
+            <div class="column">
+                <img src="media/kalmanIoU.png" title="Kalman Filter-based IoU on different prediction intervals" style="width:100%">
+            </div>
+  
+       </div>
 
         <p>
         Motion analysis of MOT17, DanceTrack, SportsMOT and Slope-Track reporting on the validation set, where the detection boxes are ground-truth boxes. The result shows that SlopeTrack has fast motion, variable-speed and non-linear motion comparable to SportsMOT.
