@@ -159,11 +159,11 @@ strong {
 }
 
 a:link {
-    color: #76B900;
+    color: #00b0f0;
 }
 
 a:visited {
-    color: green;
+    color: blue;
 }
 /*------------------------------------------------------------------*/
 /* title */
@@ -311,7 +311,7 @@ ul.authors.links li {
 
 /* Style buttons */
 .btn {
-    background-color: #76B900; /* Blue background */
+    background-color: #00b0f0; /* Blue background */
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 8px 12px; /* Some padding */
@@ -322,7 +322,7 @@ ul.authors.links li {
   
   /* Darker background on mouse-over */
 .btn:hover {
-    background-color: green;
+    background-color: blue;
 }
 
 /* For BibTeX */
