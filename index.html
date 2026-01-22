@@ -85,6 +85,19 @@
 
 
     <div class="n-article">
+        <div class="n-paper" style="text-align:center; margin-top:20px;">
+            <a href="https://www.sciencedirect.com/science/article/pii/S1077314226000305" target="_blank">
+                <img src="media/paper_cover.png" alt="Slope-Track Paper Cover" style="max-width:60%; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+            </a>
+            <p style="margin-top:10px;">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1077314226000305" target="_blank">
+                    <button class="btn">
+                        <i class="ai ai-doi"></i> Paper (CVIU)
+                    </button>
+                </a>
+            </p>
+        </div>
+        
 
 
         <h2 id="abstract">
@@ -130,15 +143,18 @@
             Motion Analysis
         </h3>
 
-        <div class="row">
-            <div class="column">
-                <img src="media/adjacent_IoU.png" alt="IoU on adjacent frames"  style="width:100%">
+        <div class="row" style="display: flex; gap: 20px;">
+            <div class="column" style="flex: 1;">
+                <img src="media/Figure_4a.png"
+                     alt="IoU on adjacent frames"
+                     style="width:100%; height:auto;">
             </div>
-            <div class="column">
-                <img src="media/kalmanIoU.png" title="Kalman Filter-based IoU on different prediction intervals" style="width:100%">
+            <div class="column" style="flex: 1;">
+                <img src="media/Figure_4b.png"
+                     alt="Kalman Filter-based IoU on different prediction intervals"
+                     style="width:100%; height:auto;">
             </div>
-  
-       </div>
+        </div>
 
         <p>
         Motion analysis of MOT17, DanceTrack, SportsMOT and Slope-Track reporting on the validation set, where the detection boxes are ground-truth boxes. The result shows that Slope-Track has fast motion, variable-speed and non-linear motion comparable to SportsMOT.
